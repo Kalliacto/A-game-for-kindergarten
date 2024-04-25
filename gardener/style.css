@@ -1,0 +1,73 @@
+html,
+body {
+    min-height: 100vh;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: blanchedalmond;
+}
+.inventory {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+}
+.pruning_shears {
+    cursor: pointer;
+}
+.garden_bed {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    max-width: 80%;
+    padding: 20px;
+    background-color: #684a13cb;
+}
+
+.hole {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #49340dcb;
+    cursor: pointer;
+}
+
+.seeds__list {
+    display: flex;
+    list-style-type: none;
+}
+
+.seeds__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.seeds__list img {
+    height: 100px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+.pruning_shears {
+    width: 100px;
+    height: 100px;
+    background: url('./images/pruning_shears.svg') no-repeat;
+    background-size: cover;
+    border: none;
+}
