@@ -8,6 +8,7 @@
     </head>
     <body>
         <div class="container">
+            <button class="btn btn__tools"></button>
             <div class="inventory">
                 <ul class="seeds__list">
                     <li class="seeds__item">
@@ -15,34 +16,81 @@
                             src="./images/margaritka.svg"
                             alt="margaritka"
                             data-name="margaritka"
+                            data-time="100"
                             draggable="true"
                         /><span>Маргаритка</span>
                     </li>
                     <li class="seeds__item">
-                        <img src="./images/rose.svg" alt="rose" data-name="rose" draggable="true" /><span>Роза</span>
+                        <img
+                            src="./images/rose.svg"
+                            alt="rose"
+                            data-name="rose"
+                            data-time="300"
+                            draggable="true"
+                        /><span>Роза</span>
                     </li>
                     <li class="seeds__item">
-                        <img src="./images/romashka.svg" alt="romashka" data-name="romashka" draggable="true" /><span
-                            >Ромашка</span
-                        >
+                        <img
+                            src="./images/romashka.svg"
+                            alt="romashka"
+                            data-time="200"
+                            data-name="romashka"
+                            draggable="true"
+                        /><span>Ромашка</span>
                     </li>
                 </ul>
                 <ul class="tools__list">
-                    <button class="pruning_shears"></button>
+                    <li class="tools__item">
+                        <img
+                            src="./images/wateringСan.svg"
+                            alt="wateringСan"
+                            data-name="wateringСan"
+                            draggable="true"
+                        />
+                    </li>
+                    <li class="tools__item">
+                        <img
+                            src="./images/pruning_shears.svg"
+                            alt="pruningShears"
+                            data-name="pruningShears"
+                            draggable="true"
+                        />
+                    </li>
                 </ul>
             </div>
             <div class="garden_bed">
-                <div class="hole" dropzone="true"></div>
-                <div class="hole" dropzone="true"></div>
-                <div class="hole" dropzone="true"></div>
-                <div class="hole" dropzone="true"></div>
-                <div class="hole" dropzone="true"></div>
-                <div class="hole" dropzone="true"></div>
-                <div class="hole" dropzone="true"></div>
-                <div class="hole" dropzone="true"></div>
-                <div class="hole" dropzone="true"></div>
-                <div class="hole" dropzone="true"></div>
+                <div class="timer">
+                    <div class="hole"></div>
+                </div>
+                <div class="timer">
+                    <div class="hole"></div>
+                </div>
+                <div class="timer">
+                    <div class="hole"></div>
+                </div>
+                <div class="timer">
+                    <div class="hole"></div>
+                </div>
+                <div class="timer">
+                    <div class="hole"></div>
+                </div>
+                <div class="timer">
+                    <div class="hole"></div>
+                </div>
+                <div class="timer">
+                    <div class="hole"></div>
+                </div>
+                <div class="timer">
+                    <div class="hole"></div>
+                </div>
+                <div class="timer">
+                    <div class="hole"></div>
+                </div>
+                <div class="timer">
+                    <div class="hole"></div>
+                </div>
             </div>
+            <button class="btn pruning_shears"></button>
         </div>
         <script src="./index.js"></script>
     </body>
