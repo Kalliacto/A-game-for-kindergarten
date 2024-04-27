@@ -52,10 +52,14 @@ function drop(e) {
         timer.style = `background: conic-gradient( #684a13cb 360deg, yellowgreen 0deg)`;
         e.target.src = `./images/${flower_name}.svg`;
         e.target.alt = flower_name;
+        e.target.ondragstart = function () {
+            return false;
+        };
         clearInterval(timerID);
         timers = timers.filter((el) => el.timerID !== timerID);
         // Что происходит если срезаем цветок в лунке
-    } else if (e.target.alt !== 'sprout' && name === 'pruningShears') {
+    } else if (e.target.tagName === 'IMG' && e.target.alt !== 'sprout' && name === 'pruningShears') {
+        console.log(e.target);
         e.target.remove();
     }
 }
@@ -73,6 +77,9 @@ function start_timer(time, timer, img, flower_name) {
             timer.style = `background: conic-gradient( #684a13cb 360deg, yellowgreen 0deg)`;
             img.src = `./images/${flower_name}.svg`;
             img.alt = flower_name;
+            img.ondragstart = function () {
+                return false;
+            };
             clearInterval(timerID);
             timers = timers.filter((el) => el.timerID !== timerID);
         }
