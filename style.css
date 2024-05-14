@@ -19,7 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     width: 100%;
     max-width: 1000px;
     height: 100%;
@@ -118,4 +118,97 @@ img {
     align-self: flex-end;
     transform: translateX(-100%);
     margin-top: 20px;
+}
+
+.bouquet__container {
+    align-self: flex-start;
+    margin-left: 10%;
+    display: flex;
+    align-items: flex-end;
+    margin-top: -40px;
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.bouquet__vase {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    z-index: 5;
+    top: 35%;
+}
+
+.bouquet__list {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    list-style: none;
+    display: block;
+    display: flex;
+    z-index: 2;
+    top: -30px;
+}
+
+.bouquet__item {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+}
+.bouquet__item_1 {
+    position: absolute;
+    top: -6%;
+}
+.bouquet__item_2 {
+    position: absolute;
+    left: 40%;
+    transform: rotate(30deg);
+    top: 18%;
+}
+.bouquet__item_3 {
+    position: absolute;
+    left: -30%;
+    transform: rotate(-30deg) scaleX(-1);
+    top: 18%;
+}
+
+.bouquet__item_4 {
+    position: absolute;
+    left: 30%;
+    transform: rotate(25deg);
+}
+
+.bouquet__item_5 {
+    position: absolute;
+    left: -20%;
+    transform: rotate(-20deg) scaleX(-1);
+}
+
+.bouquet__item_6 {
+    position: absolute;
+    left: 20%;
+    transform: rotate(20deg) scaleX(-1);
+}
+.bouquet__item_7 {
+    position: absolute;
+    left: -20%;
+    transform: rotate(-20deg) scaleX(-1);
+    top: 25%;
+}
+.bouquet__item_8 {
+    position: absolute;
+    left: 20%;
+    transform: rotate(20deg) scaleX(-1);
+    top: 25%;
+}
+.bouquet__item_9 {
+    position: absolute;
+    transform: rotate(-20deg) scaleX(-1);
+    top: 25%;
+}
+.bouquet__item_10 {
+    position: absolute;
+    left: 10%;
+    transform: rotate(20deg) scaleX(-1);
+    top: 10%;
 }

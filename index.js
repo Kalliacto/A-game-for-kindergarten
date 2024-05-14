@@ -1,6 +1,8 @@
 const inventory = document.body.querySelector('.inventory');
 const garden_bed = document.body.querySelector('.garden_bed');
-let timers = [];
+const bouquetList = document.querySelector('.bouquet__list');
+const timers = [];
+const vaseFlowers = [];
 
 // Открываем инвентарь
 const btnTools = document.body.querySelector('.btn__tools');
@@ -92,12 +94,33 @@ function time_to_deg(time) {
     let deg_per_second = (360 * time_percent) / 100;
     return deg_per_second;
 }
+function createVaseItem(imgItem, index) {
+    const bouquetItem = document.createElement('li');
+    bouquetItem.classList.add('bouquet__item', `bouquet__item_${index + 1}`);
+    bouquetItem.append(imgItem);
+
+    return bouquetItem;
+}
+// Функция заполнения лишек в вазе bouquetList
+function fillVase() {
+    vaseFlowers.forEach((el, i) => {
+        bouquetList.append(createVaseItem(el, i));
+    });
+}
 
 // Срезаем цветочки
 const pruningShears = document.body.querySelector('.pruning_shears');
 pruningShears.addEventListener('click', () => {
     let flowers = document.querySelectorAll('.hole');
+    bouquetList.innerHTML = '';
+    vaseFlowers.length = 0;
     flowers.forEach((el) => {
-        if (el.firstElementChild?.alt !== 'sprout') el.innerHTML = '';
+        // if (el.firstElementChild?.alt !== 'sprout') el.innerHTML = '';
+        if (el.firstElementChild?.alt !== 'sprout' && el.firstElementChild) {
+            vaseFlowers.push(el.firstElementChild);
+        }
     });
+
+    // Запустили функцию заполнения лишек
+    fillVase();
 });
